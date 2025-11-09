@@ -1,0 +1,81 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * [https://ionicframework.com/docs/layout/global-stylesheets](https://ionicframework.com/docs/layout/global-stylesheets)
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+
+
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * [https://ionicframework.com/docs/theming/dark-mode](https://ionicframework.com/docs/theming/dark-mode)
+ */
+
+
+@import "@ionic/angular/css/palettes/dark.always.css"; 
+@import "@ionic/angular/css/palettes/dark.class.css"; 
+@import '@ionic/angular/css/palettes/dark.system.css';
+
+
+ion-card { --background:#e8f4ff !important; }
+
+
+/* Corrección visual para botones y textos de la toolbar/menu */
+ion-toolbar button,
+ion-toolbar a,
+ion-toolbar .tab-button,
+ion-toolbar .menu-label,
+ion-toolbar .menu-link {
+  color: #fff !important;       /* Blanco puro para mejor contraste */
+  opacity: 1 !important;
+  font-weight: bold;
+}
+
+/* Forzar contraste para cualquier tab inactivo/desactivado y para PERFIL si aplica */
+ion-toolbar .tab-button[aria-selected="false"],
+ion-toolbar .tab-button-inactive,
+ion-toolbar .menu-label.inactive,
+ion-toolbar .tab-button,
+ion-toolbar .menu-label,
+ion-toolbar label,
+ion-toolbar * {
+  color: #fff !important;         /* Fuerza blanco para todos los labels de toolbar */
+  opacity: 1 !important;
+  font-weight: bold;
+  text-shadow: 1px 1px 6px #243965, 0 0 2px #000; /* Sombra para extra contraste */
+}
+
+/* Si usas ion-segment o tabs, mejora contraste aquí también */
+ion-segment-button {
+  color: #fff !important;
+}
+ion-segment-button[aria-selected='false'] {
+  color: #bdbdbd !important;
+}

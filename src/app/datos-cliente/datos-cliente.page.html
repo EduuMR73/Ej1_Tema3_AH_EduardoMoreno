@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Datos del Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Datos del Cliente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngIf="datos">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Información capturada</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Nombre:</strong> {{ datos.nombre }}</p>
+        <p><strong>Apellido:</strong> {{ datos.apellido }}</p>
+        <p><strong>Email:</strong> {{ datos.email }}</p>
+        <p><strong>Nacionalidad:</strong> {{ datos.nacionalidad }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="!datos">
+    <ion-text color="danger">No hay datos disponibles.</ion-text>
+  </div>
+</ion-content>
